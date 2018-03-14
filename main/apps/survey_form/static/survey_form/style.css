@@ -1,0 +1,14 @@
+#container {
+    padding: 15px;
+}
+.surveyForm {
+    width: 500px;
+    margin: 15px auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: blue
+}

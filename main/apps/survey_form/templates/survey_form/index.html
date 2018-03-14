@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Survey Form</title>
+        {% load static %}
+        <link rel="stylesheet" types="text/css" href="{% static "survey_form/style.css" %}">
+    </head>
+    <body>
+        <div id="container">
+            <form class='surveyForm' action='/surveys/process' method="POST">
+                {% csrf_token %}
+                <label for='name'>Your Name:
+                    <input type="text" name='name'>
+                </label>
+                <br>
+                <label for='location'>Dojo Location:
+                    <select name='location'>
+                        <option value="seattle">Seattle</option>
+                        <option value="sanfrancisco">San Francisco</option>
+                        <option value="losangeles">Los Angeles</option>
+                        <option value="tulsa">Tulsa</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="houston">Houston</option>
+                        <option value="newyork">New York</option>
+                        <option value="dc">Washington D.C.</option>
+                    </select>
+                </label>
+                <br>
+                <label for='language'>Favorite Language:
+                    <select name='language'>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="ios">iOS</option>
+                        <option value="Java">Java</option>
+                        <option value="c#">C#</option>
+                    </select>
+                </label>
+                <br>
+                <label for='comment'>Comment (optional):
+                    <textarea name='comment' rows="10" cols="65"></textarea>
+                </label>
+                <br>
+                <input class='btn' type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
